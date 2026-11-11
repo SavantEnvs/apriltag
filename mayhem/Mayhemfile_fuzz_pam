@@ -1,0 +1,9 @@
+project: savantenvs/apriltag
+target: fuzz-pam
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-pam/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_pam
+    libfuzzer: true
+    timeout: 10

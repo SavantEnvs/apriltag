@@ -1,0 +1,9 @@
+project: savantenvs/apriltag
+target: fuzz-pjpeg
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-pjpeg/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_pjpeg
+    libfuzzer: true
+    timeout: 10
